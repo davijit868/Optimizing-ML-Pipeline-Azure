@@ -6,9 +6,9 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+In this project, A classifier is built to predict if the customer of the bank will subscribe to a term deposit with the bank or not. We explored and compared the HyperDrive option, of finding the best hyperparameters for logistic regression using the Sklearn library, with the AutoML option which explores different types of classifaction models and hyperparameters.
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+We are explored 12 runs to find the best hyperparameters using HyperDrive. The best performance with the HyperDrive option is the accuracy of 91.60 %. Similarly, 12 iterations are used for the AutoML option so that two options can be compared. With AutoML the best performance results in accuracy of 91.66 % with the model: VotingEnsemble.
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
