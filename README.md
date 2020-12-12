@@ -6,25 +6,19 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-In this project, A classifier is built to predict if the customer of the bank will subscribe to a term deposit with the bank or not. We explored and compared the HyperDrive option, of finding the best hyperparameters for logistic regression using the Sklearn library, with the AutoML option which explores different types of classifaction models and hyperparameters.
+In this project, A classifier is built to predict if the customer of the bank will subscribe to a term deposit with the bank or not. HyperDrive option is explored to find the best hyperparameters for logistic regression using the Sklearn library, and compared with AutoML option which explores different types of classifaction models and hyperparameters.
 
-We are explored 12 runs to find the best hyperparameters using HyperDrive. The best performance with the HyperDrive option is the accuracy of 91.60 %. Similarly, 12 iterations are used for the AutoML option so that two options can be compared. With AutoML the best performance results in accuracy of 91.66 % with the model: VotingEnsemble.
+12 runs are explored to find the best hyperparameters using HyperDrive. The best performance with the HyperDrive option is the accuracy of 91.60 %. Similarly, 12 iterations are used for the AutoML option so that two options can be compared. With AutoML the best performance results in accuracy of 91.66 % with the model: VotingEnsemble.
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
-- The first steps are generic, So mainly intialize the workspace and create a compute cluster for model training. Then prepare the data by creating a TabularDataset form the provided CSV file.
-
-- The data was then cleaned, and split using the training script 'train.py'.
-
-- The classifying algorithm used is logistic regression. It is used to estimate discrete values based on a set of independent variables.
-
-- Next, SKLearn estimator was constructed. This estimator will provide a simple way of deploying the training job on the compute target.
-
+**Pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+- Intialized the workspace and created a compute cluster for model training. Then preparde the data by creating a TabularDataset form the provided CSV file.
+- The data is cleaned, and split using the training script 'train.py'.
+- Logistic Regression algorithm is used for Classification. It is used to estimate discrete values based on a set of independent variables.
+- SKLearn estimator was constructed. This estimator will provide a simple way of deploying the training job on the compute target.
 - The last step is to provide the Sampling Parameter to run the hyperparameter tuning. The ranges for the inverse of the regularization strength and choices for maximum number of iterations to converge are provided.
-
 - We configure the HyperDrive to set the 'Accuracy' as the primary metric.
-
-- Finally sibmit the experiment and find the best model.
+- Submited the experiment and find the best model.
 
 **What are the benefits of the parameter sampler you chose?**
 - Random sampling supports discrete and continuous hyperparameters. It supports early termination of low-performance runs and thereby reducing computation costs and speedup up the exploration of the parameter space.
