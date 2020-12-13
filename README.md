@@ -43,7 +43,6 @@ ITERATION   PIPELINE                                       DURATION      METRIC 
 - In our experiments, the performance of 2 options is comparable, with HyperDrive option having an accuracy of 91.47% while AutoML option having accuracy of 91.52%. Even with consideration to the limitation of our experiments and limited data points, we can say that AutoML will result in a better performance as AutoML go through multiple classifciation models while the HyperDrive option just uses the Logistic Regression Algorithm.
 - In Hyperdrive we have to build a training script, but in AutoML we just need to pass the data, and define the task.
 - Hyperdrive option took around 25 minutes to complete whereas AutoML took about 1 hour to complete it's execution.
-- 
 
 ## Future work
 - Data is highly imbalanced, so strategies to deal with class imbalance like oversampling, undersampling, SMOTE etc can be explored. We can also try grid sampling.
